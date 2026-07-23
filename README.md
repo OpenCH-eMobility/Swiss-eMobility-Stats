@@ -1,5 +1,5 @@
 # Swiss-eMobility---Stats
-Statistiques publiés sur Swiss eMobility
+Statistics published on Swiss eMobility (https://www.swiss-emobility.ch/)
 
 Any public reuse, redistribution, or republication of
 these visualizations must visibly credit:
