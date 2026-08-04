@@ -256,7 +256,7 @@
     <tr>
       <th class="rank-head"></th>
       <th class="sortable" data-sort-key="canton"><button type="button" class="sort-trigger co2-sort-trigger" data-sort-key="canton">Canton<span class="sort-indicator"></span></button></th>
-      <th class="sortable" data-sort-key="pw-ytd-co2" aria-sort="descending"><button type="button" class="sort-trigger co2-sort-trigger" data-sort-key="pw-ytd-co2">Voitures de tourisme CO2 cumul annuel (g/km)<span class="sort-indicator"></span></button></th>
+      <th class="sortable" data-sort-key="pw-ytd-co2" aria-sort="ascending"><button type="button" class="sort-trigger co2-sort-trigger" data-sort-key="pw-ytd-co2">Voitures de tourisme CO2 cumul annuel (g/km)<span class="sort-indicator"></span></button></th>
       <th class="sortable" data-sort-key="pw-current-month-co2"><button type="button" class="sort-trigger co2-sort-trigger" data-sort-key="pw-current-month-co2">Voitures de tourisme CO2 mois courant (g/km)<span class="sort-indicator"></span></button></th>
       <th class="sortable" data-sort-key="lnf-ytd-co2"><button type="button" class="sort-trigger co2-sort-trigger" data-sort-key="lnf-ytd-co2">Véhicules utilitaires légers CO2 cumul annuel (g/km)<span class="sort-indicator"></span></button></th>
       <th class="sortable" data-sort-key="lnf-current-month-co2"><button type="button" class="sort-trigger co2-sort-trigger" data-sort-key="lnf-current-month-co2">Véhicules utilitaires légers CO2 mois courant (g/km)<span class="sort-indicator"></span></button></th>
@@ -283,7 +283,7 @@
     var filterInput = document.querySelector('.co2-filter-input');
     var triggers = Array.prototype.slice.call(table.querySelectorAll('.co2-sort-trigger'));
     var summaryRow = tbody.querySelector('.summary-row');
-    var sortState = { key: 'pw-ytd-co2', direction: 'desc' };
+    var sortState = { key: 'pw-ytd-co2', direction: 'asc' };
 
     function parseNumber(value) {
       var n = Number(value);
@@ -291,6 +291,9 @@
     }
 
     function defaultDirectionForKey(key) {
+      if (key === 'pw-ytd-co2') {
+        return 'asc';
+      }
       return key === 'canton' ? 'asc' : 'desc';
     }
 
