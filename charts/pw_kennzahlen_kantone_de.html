@@ -64,6 +64,8 @@
       .subtitle { font-size: 14px; }
       .canton-kpi-table { font-size: 12px; }
       .canton-kpi-table th, .canton-kpi-table td { padding: 6px 6px; }
+      .co2-kpi-table { font-size: 12px; }
+      .co2-kpi-table th, .co2-kpi-table td { padding: 6px 6px; }
       .bar-bg { height: 16px; }
       .bar-label { font-size: 10px; }
 
@@ -123,6 +125,57 @@
 
     .canton-kpi-table th.sortable {
       padding: 0;
+    }
+
+    .co2-section-title {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .co2-kpi-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      table-layout: fixed;
+    }
+
+    .co2-kpi-table th,
+    .co2-kpi-table td {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 7px 8px;
+      vertical-align: middle;
+    }
+
+    .co2-kpi-table thead th {
+      font-weight: 700;
+      text-align: left;
+      border-bottom: 2px solid #1f2937;
+      color: #111827;
+    }
+
+    .co2-kpi-table .rank-head {
+      width: 28px;
+    }
+
+    .co2-kpi-table .rank {
+      width: 28px;
+      color: #374151;
+      text-align: left;
+    }
+
+    .co2-kpi-table .canton {
+      width: 32%;
+      color: #111827;
+    }
+
+    .co2-kpi-table .co2-value {
+      width: 22.66%;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: #111827;
     }
 
     .sort-trigger {
@@ -219,13 +272,130 @@
 <table class="canton-kpi-table" aria-label="Kennzahlen pro Kanton">
   <thead>
     <tr>
-      <th class="rank-head"></th><th>Kanton</th><th>batterieelektrische (BEV)</th><th>Plug-In Hybride</th><th>PEV (BEV + PHEV)</th>
+      <th class="rank-head"></th><th class="sortable" data-sort-key="canton"><button type="button" class="sort-trigger" data-sort-key="canton">Kanton<span class="sort-indicator"></span></button></th><th class="sortable" data-sort-key="bev-pct" aria-sort="descending"><button type="button" class="sort-trigger" data-sort-key="bev-pct">batterieelektrische (BEV)<span class="sort-indicator"></span></button></th><th class="sortable" data-sort-key="phev-pct"><button type="button" class="sort-trigger" data-sort-key="phev-pct">Plug-In Hybride<span class="sort-indicator"></span></button></th><th class="sortable" data-sort-key="pev-pct"><button type="button" class="sort-trigger" data-sort-key="pev-pct">PEV (BEV + PHEV)<span class="sort-indicator"></span></button></th>
     </tr>
   </thead>
   <tbody>
-    <tr class="summary-row"><td class="rank"></td><td class="canton">Schweiz / Suisse / Svizzera</td><td class="metric summary-value">24.2%</td><td class="metric summary-value">11.8%</td><td class="metric summary-value">36.0%</td></tr><tr><td class="rank">1</td><td class="canton">Zug</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:99.97%"><span class="bar-label">31.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:68.84%"><span class="bar-label">12.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:99.96%"><span class="bar-label">44.3%</span></div></div></td></tr><tr><td class="rank">2</td><td class="canton">Solothurn</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:97.46%"><span class="bar-label">31.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:50.52%"><span class="bar-label">9.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.71%"><span class="bar-label">40.2%</span></div></div></td></tr><tr><td class="rank">3</td><td class="canton">Liechtenstein</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:97.15%"><span class="bar-label">31.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:62.73%"><span class="bar-label">11.3%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:95.45%"><span class="bar-label">42.3%</span></div></div></td></tr><tr><td class="rank">4</td><td class="canton">Zürich</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:97.15%"><span class="bar-label">31.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:65.51%"><span class="bar-label">11.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:96.35%"><span class="bar-label">42.7%</span></div></div></td></tr><tr><td class="rank">5</td><td class="canton">Luzern</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:95.58%"><span class="bar-label">30.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:48.30%"><span class="bar-label">8.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.46%"><span class="bar-label">39.2%</span></div></div></td></tr><tr><td class="rank">6</td><td class="canton">Nidwalden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:95.27%"><span class="bar-label">30.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:63.29%"><span class="bar-label">11.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:94.55%"><span class="bar-label">41.9%</span></div></div></td></tr><tr><td class="rank">7</td><td class="canton">Appenzell Ausserrhoden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:94.95%"><span class="bar-label">30.3%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:55.51%"><span class="bar-label">10.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.94%"><span class="bar-label">40.3%</span></div></div></td></tr><tr><td class="rank">8</td><td class="canton">Graubünden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:93.39%"><span class="bar-label">29.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:51.07%"><span class="bar-label">9.2%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.00%"><span class="bar-label">39.0%</span></div></div></td></tr><tr><td class="rank">9</td><td class="canton">Aargau</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:93.39%"><span class="bar-label">29.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:57.73%"><span class="bar-label">10.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.49%"><span class="bar-label">40.1%</span></div></div></td></tr><tr><td class="rank">10</td><td class="canton">Thurgau</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:91.19%"><span class="bar-label">29.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:59.40%"><span class="bar-label">10.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:89.81%"><span class="bar-label">39.8%</span></div></div></td></tr><tr><td class="rank">11</td><td class="canton">St. Gallen</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.57%"><span class="bar-label">28.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:52.18%"><span class="bar-label">9.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:86.42%"><span class="bar-label">38.3%</span></div></div></td></tr><tr><td class="rank">12</td><td class="canton">Schwyz</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.06%"><span class="bar-label">28.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:63.84%"><span class="bar-label">11.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:89.36%"><span class="bar-label">39.6%</span></div></div></td></tr><tr><td class="rank">13</td><td class="canton">Obwalden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:87.75%"><span class="bar-label">28.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:43.30%"><span class="bar-label">7.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:80.78%"><span class="bar-label">35.8%</span></div></div></td></tr><tr><td class="rank">14</td><td class="canton">Schaffhausen</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:86.81%"><span class="bar-label">27.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:54.96%"><span class="bar-label">9.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.07%"><span class="bar-label">37.7%</span></div></div></td></tr><tr><td class="rank">15</td><td class="canton">Basel-Landschaft</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:86.18%"><span class="bar-label">27.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:64.40%"><span class="bar-label">11.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.23%"><span class="bar-label">39.1%</span></div></div></td></tr><tr><td class="rank">16</td><td class="canton">Glarus</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.87%"><span class="bar-label">27.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:59.40%"><span class="bar-label">10.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.97%"><span class="bar-label">38.1%</span></div></div></td></tr><tr><td class="rank">17</td><td class="canton">Bern / Berne</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:83.67%"><span class="bar-label">26.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:47.74%"><span class="bar-label">8.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.65%"><span class="bar-label">35.3%</span></div></div></td></tr><tr><td class="rank">18</td><td class="canton">Uri</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:81.48%"><span class="bar-label">26.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:52.18%"><span class="bar-label">9.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.88%"><span class="bar-label">35.4%</span></div></div></td></tr><tr><td class="rank">19</td><td class="canton">Basel-Stadt</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.91%"><span class="bar-label">25.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:68.84%"><span class="bar-label">12.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.52%"><span class="bar-label">37.9%</span></div></div></td></tr><tr><td class="rank">20</td><td class="canton">Valais / Wallis</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:74.58%"><span class="bar-label">23.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:50.52%"><span class="bar-label">9.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:74.24%"><span class="bar-label">32.9%</span></div></div></td></tr><tr><td class="rank">21</td><td class="canton">Fribourg / Freiburg</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:67.69%"><span class="bar-label">21.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:66.06%"><span class="bar-label">11.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:75.59%"><span class="bar-label">33.5%</span></div></div></td></tr><tr><td class="rank">22</td><td class="canton">Vaud</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:66.12%"><span class="bar-label">21.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:78.27%"><span class="bar-label">14.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.43%"><span class="bar-label">35.2%</span></div></div></td></tr><tr><td class="rank">23</td><td class="canton">Neuchâtel</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:56.10%"><span class="bar-label">17.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:64.40%"><span class="bar-label">11.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:66.57%"><span class="bar-label">29.5%</span></div></div></td></tr><tr><td class="rank">24</td><td class="canton">Jura</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:50.45%"><span class="bar-label">16.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:53.29%"><span class="bar-label">9.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:57.99%"><span class="bar-label">25.7%</span></div></div></td></tr><tr><td class="rank">25</td><td class="canton">Genève</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:44.50%"><span class="bar-label">14.2%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:91.04%"><span class="bar-label">16.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:69.05%"><span class="bar-label">30.6%</span></div></div></td></tr><tr><td class="rank">26</td><td class="canton">Ticino</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:41.05%"><span class="bar-label">13.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:59.96%"><span class="bar-label">10.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:53.70%"><span class="bar-label">23.8%</span></div></div></td></tr><tr><td class="rank">27</td><td class="canton">Appenzell Innerrhoden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:23.19%"><span class="bar-label">7.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:99.93%"><span class="bar-label">18.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:57.54%"><span class="bar-label">25.5%</span></div></div></td></tr>
+    <tr class="summary-row"><td class="rank"></td><td class="canton">Schweiz / Suisse / Svizzera</td><td class="metric summary-value">24.2%</td><td class="metric summary-value">11.8%</td><td class="metric summary-value">36.0%</td></tr><tr data-canton="zug" data-bev-pct="31.9100" data-phev-pct="12.4062" data-pev-pct="44.3162"><td class="rank">1</td><td class="canton">Zug</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:99.97%"><span class="bar-label">31.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:68.84%"><span class="bar-label">12.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:99.96%"><span class="bar-label">44.3%</span></div></div></td></tr><tr data-canton="solothurn" data-bev-pct="31.1161" data-phev-pct="9.1319" data-pev-pct="40.2480"><td class="rank">2</td><td class="canton">Solothurn</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:97.46%"><span class="bar-label">31.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:50.52%"><span class="bar-label">9.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.71%"><span class="bar-label">40.2%</span></div></div></td></tr><tr data-canton="liechtenstein" data-bev-pct="30.9979" data-phev-pct="11.2527" data-pev-pct="42.2505"><td class="rank">3</td><td class="canton">Liechtenstein</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:97.15%"><span class="bar-label">31.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:62.73%"><span class="bar-label">11.3%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:95.45%"><span class="bar-label">42.3%</span></div></div></td></tr><tr data-canton="zürich" data-bev-pct="30.9541" data-phev-pct="11.7597" data-pev-pct="42.7138"><td class="rank">4</td><td class="canton">Zürich</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:97.15%"><span class="bar-label">31.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:65.51%"><span class="bar-label">11.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:96.35%"><span class="bar-label">42.7%</span></div></div></td></tr><tr data-canton="luzern" data-bev-pct="30.5055" data-phev-pct="8.6738" data-pev-pct="39.1794"><td class="rank">5</td><td class="canton">Luzern</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:95.58%"><span class="bar-label">30.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:48.30%"><span class="bar-label">8.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.46%"><span class="bar-label">39.2%</span></div></div></td></tr><tr data-canton="nidwalden" data-bev-pct="30.4217" data-phev-pct="11.4458" data-pev-pct="41.8675"><td class="rank">6</td><td class="canton">Nidwalden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:95.27%"><span class="bar-label">30.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:63.29%"><span class="bar-label">11.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:94.55%"><span class="bar-label">41.9%</span></div></div></td></tr><tr data-canton="appenzell ausserrhoden" data-bev-pct="30.2977" data-phev-pct="9.9825" data-pev-pct="40.2802"><td class="rank">7</td><td class="canton">Appenzell Ausserrhoden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:94.95%"><span class="bar-label">30.3%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:55.51%"><span class="bar-label">10.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.94%"><span class="bar-label">40.3%</span></div></div></td></tr><tr data-canton="graubünden" data-bev-pct="29.7974" data-phev-pct="9.1713" data-pev-pct="38.9687"><td class="rank">8</td><td class="canton">Graubünden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:93.39%"><span class="bar-label">29.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:51.07%"><span class="bar-label">9.2%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.00%"><span class="bar-label">39.0%</span></div></div></td></tr><tr data-canton="aargau" data-bev-pct="29.7677" data-phev-pct="10.3650" data-pev-pct="40.1327"><td class="rank">9</td><td class="canton">Aargau</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:93.39%"><span class="bar-label">29.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:57.73%"><span class="bar-label">10.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.49%"><span class="bar-label">40.1%</span></div></div></td></tr><tr data-canton="thurgau" data-bev-pct="29.0832" data-phev-pct="10.7482" data-pev-pct="39.8314"><td class="rank">10</td><td class="canton">Thurgau</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:91.19%"><span class="bar-label">29.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:59.40%"><span class="bar-label">10.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:89.81%"><span class="bar-label">39.8%</span></div></div></td></tr><tr data-canton="st. gallen" data-bev-pct="28.9228" data-phev-pct="9.3844" data-pev-pct="38.3072"><td class="rank">11</td><td class="canton">St. Gallen</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:90.57%"><span class="bar-label">28.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:52.18%"><span class="bar-label">9.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:86.42%"><span class="bar-label">38.3%</span></div></div></td></tr><tr data-canton="schwyz" data-bev-pct="28.0766" data-phev-pct="11.5328" data-pev-pct="39.6094"><td class="rank">12</td><td class="canton">Schwyz</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.06%"><span class="bar-label">28.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:63.84%"><span class="bar-label">11.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:89.36%"><span class="bar-label">39.6%</span></div></div></td></tr><tr data-canton="obwalden" data-bev-pct="28.0000" data-phev-pct="7.7778" data-pev-pct="35.7778"><td class="rank">13</td><td class="canton">Obwalden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:87.75%"><span class="bar-label">28.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:43.30%"><span class="bar-label">7.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:80.78%"><span class="bar-label">35.8%</span></div></div></td></tr><tr data-canton="schaffhausen" data-bev-pct="27.7387" data-phev-pct="9.9497" data-pev-pct="37.6884"><td class="rank">14</td><td class="canton">Schaffhausen</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:86.81%"><span class="bar-label">27.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:54.96%"><span class="bar-label">9.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.07%"><span class="bar-label">37.7%</span></div></div></td></tr><tr data-canton="basel-landschaft" data-bev-pct="27.4985" data-phev-pct="11.5722" data-pev-pct="39.0707"><td class="rank">15</td><td class="canton">Basel-Landschaft</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:86.18%"><span class="bar-label">27.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:64.40%"><span class="bar-label">11.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:88.23%"><span class="bar-label">39.1%</span></div></div></td></tr><tr data-canton="glarus" data-bev-pct="27.3913" data-phev-pct="10.7246" data-pev-pct="38.1159"><td class="rank">16</td><td class="canton">Glarus</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.87%"><span class="bar-label">27.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:59.40%"><span class="bar-label">10.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.97%"><span class="bar-label">38.1%</span></div></div></td></tr><tr data-canton="bern / berne" data-bev-pct="26.6719" data-phev-pct="8.6413" data-pev-pct="35.3133"><td class="rank">17</td><td class="canton">Bern / Berne</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:83.67%"><span class="bar-label">26.7%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:47.74%"><span class="bar-label">8.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.65%"><span class="bar-label">35.3%</span></div></div></td></tr><tr data-canton="uri" data-bev-pct="26.0000" data-phev-pct="9.4000" data-pev-pct="35.4000"><td class="rank">18</td><td class="canton">Uri</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:81.48%"><span class="bar-label">26.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:52.18%"><span class="bar-label">9.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.88%"><span class="bar-label">35.4%</span></div></div></td></tr><tr data-canton="basel-stadt" data-bev-pct="25.5024" data-phev-pct="12.4047" data-pev-pct="37.9071"><td class="rank">19</td><td class="canton">Basel-Stadt</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.91%"><span class="bar-label">25.5%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:68.84%"><span class="bar-label">12.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:85.52%"><span class="bar-label">37.9%</span></div></div></td></tr><tr data-canton="valais / wallis" data-bev-pct="23.8047" data-phev-pct="9.0599" data-pev-pct="32.8646"><td class="rank">20</td><td class="canton">Valais / Wallis</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:74.58%"><span class="bar-label">23.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:50.52%"><span class="bar-label">9.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:74.24%"><span class="bar-label">32.9%</span></div></div></td></tr><tr data-canton="fribourg / freiburg" data-bev-pct="21.5911" data-phev-pct="11.8638" data-pev-pct="33.4549"><td class="rank">21</td><td class="canton">Fribourg / Freiburg</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:67.69%"><span class="bar-label">21.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:66.06%"><span class="bar-label">11.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:75.59%"><span class="bar-label">33.5%</span></div></div></td></tr><tr data-canton="vaud" data-bev-pct="21.1463" data-phev-pct="14.1025" data-pev-pct="35.2488"><td class="rank">22</td><td class="canton">Vaud</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:66.12%"><span class="bar-label">21.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:78.27%"><span class="bar-label">14.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:79.43%"><span class="bar-label">35.2%</span></div></div></td></tr><tr data-canton="neuchâtel" data-bev-pct="17.9116" data-phev-pct="11.6314" data-pev-pct="29.5429"><td class="rank">23</td><td class="canton">Neuchâtel</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:56.10%"><span class="bar-label">17.9%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:64.40%"><span class="bar-label">11.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:66.57%"><span class="bar-label">29.5%</span></div></div></td></tr><tr data-canton="jura" data-bev-pct="16.1343" data-phev-pct="9.5823" data-pev-pct="25.7166"><td class="rank">24</td><td class="canton">Jura</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:50.45%"><span class="bar-label">16.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:53.29%"><span class="bar-label">9.6%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:57.99%"><span class="bar-label">25.7%</span></div></div></td></tr><tr data-canton="genève" data-bev-pct="14.2050" data-phev-pct="16.4181" data-pev-pct="30.6231"><td class="rank">25</td><td class="canton">Genève</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:44.50%"><span class="bar-label">14.2%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:91.04%"><span class="bar-label">16.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:69.05%"><span class="bar-label">30.6%</span></div></div></td></tr><tr data-canton="ticino" data-bev-pct="13.0608" data-phev-pct="10.7709" data-pev-pct="23.8317"><td class="rank">26</td><td class="canton">Ticino</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:41.05%"><span class="bar-label">13.1%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:59.96%"><span class="bar-label">10.8%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:53.70%"><span class="bar-label">23.8%</span></div></div></td></tr><tr data-canton="appenzell innerrhoden" data-bev-pct="7.4414" data-phev-pct="18.0134" data-pev-pct="25.4548"><td class="rank">27</td><td class="canton">Appenzell Innerrhoden</td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:23.19%"><span class="bar-label">7.4%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:99.93%"><span class="bar-label">18.0%</span></div></div></td><td class="metric"><div class="bar-bg"><div class="bar-fill" style="width:57.54%"><span class="bar-label">25.5%</span></div></div></td></tr>
   </tbody>
 </table>
+
+<script>
+  (function () {
+    var pageLang = document.documentElement.getAttribute('lang') || 'de-CH';
+    var table = document.querySelector('.canton-kpi-table');
+    if (!table) {
+      return;
+    }
+
+    var triggers = Array.prototype.slice.call(document.querySelectorAll('.sort-trigger'));
+    if (!triggers.length) {
+      return;
+    }
+
+    var tbody = table.querySelector('tbody');
+    if (!tbody) {
+      return;
+    }
+
+    var summaryRow = tbody.querySelector('.summary-row');
+    var sortState = { key: 'bev-pct', direction: 'desc' };
+
+    function defaultDirectionForKey(key) {
+      return key === 'canton' ? 'asc' : 'desc';
+    }
+
+    function parseNumber(value) {
+      var n = Number(value);
+      return Number.isNaN(n) ? 0 : n;
+    }
+
+    function comparator(column, direction) {
+      var factor = direction === 'asc' ? 1 : -1;
+      return function (a, b) {
+        if (column === 'canton') {
+          var av = a.getAttribute('data-canton') || '';
+          var bv = b.getAttribute('data-canton') || '';
+          return av.localeCompare(bv, pageLang) * factor;
+        }
+
+        var key = 'data-' + column;
+        var avn = parseNumber(a.getAttribute(key));
+        var bvn = parseNumber(b.getAttribute(key));
+        if (avn === bvn) {
+          var ac = a.getAttribute('data-canton') || '';
+          var bc = b.getAttribute('data-canton') || '';
+          return ac.localeCompare(bc, pageLang) * factor;
+        }
+        return (avn - bvn) * factor;
+      };
+    }
+
+    function updateIndicators() {
+      var headers = Array.prototype.slice.call(table.querySelectorAll('th.sortable'));
+      headers.forEach(function (header) {
+        var key = header.getAttribute('data-sort-key');
+        var indicator = header.querySelector('.sort-indicator');
+        header.removeAttribute('aria-sort');
+        if (!indicator) {
+          return;
+        }
+
+        if (key !== sortState.key) {
+          indicator.textContent = '';
+          return;
+        }
+
+        if (sortState.direction === 'asc') {
+          indicator.textContent = '▲';
+          header.setAttribute('aria-sort', 'ascending');
+        } else {
+          indicator.textContent = '▼';
+          header.setAttribute('aria-sort', 'descending');
+        }
+      });
+    }
+
+    function applySort(sortColumn, sortDirection) {
+      var sortableRows = Array.prototype.slice.call(tbody.querySelectorAll('tr:not(.summary-row)'));
+
+      sortableRows.sort(comparator(sortColumn, sortDirection));
+      sortableRows.forEach(function (row, idx) {
+        var rankCell = row.querySelector('.rank');
+        if (rankCell) {
+          rankCell.textContent = String(idx + 1);
+        }
+        tbody.appendChild(row);
+      });
+
+      if (summaryRow) {
+        tbody.insertBefore(summaryRow, tbody.firstChild);
+      }
+
+      updateIndicators();
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var key = trigger.getAttribute('data-sort-key');
+        if (!key) {
+          return;
+        }
+
+        if (sortState.key === key) {
+          sortState.direction = sortState.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+          sortState.key = key;
+          sortState.direction = defaultDirectionForKey(key);
+        }
+
+        applySort(sortState.key, sortState.direction);
+      });
+    });
+
+    applySort(sortState.key, sortState.direction);
+  })();
+</script>
 
 </div>
     
