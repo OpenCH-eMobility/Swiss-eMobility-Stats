@@ -43,6 +43,27 @@
       margin-top: 10px;
     }
 
+    .export-controls {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+
+    .export-controls button {
+      padding: 8px 12px;
+      border: 1px solid #3556a8;
+      border-radius: 4px;
+      background: #ffffff;
+      color: #3556a8;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .export-controls button:disabled {
+      cursor: wait;
+      opacity: 0.7;
+    }
+
     .note {
       margin-top: 8px;
       color: var(--muted);
@@ -78,8 +99,9 @@
   <div class="page">
     <h1>Nouvelles immatriculations véhicules utilitaires légers : Toutes motorisations confondues - parts de marché</h1>
     <div class="subtitle">Suisse : année en cours (état : 31.10.2026)</div>
+    <div class="export-controls"><button id="download-chart-png" type="button">Télécharger le PNG avec les références</button></div>
     <div class="chart-wrap"><div style="height:700px; width:100%;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
-        <script charset="utf-8" src="https://cdn.plot.ly/plotly-4.1.1.min.js" integrity="sha256-O24V1F27f8pb0glCkelh3cVHLNiHAJ5gCaVtq2aNch8=" crossorigin="anonymous"></script>                <div id="34a408b4-26b6-4d47-9d8d-7a2815f17acb" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("34a408b4-26b6-4d47-9d8d-7a2815f17acb")) {                    Plotly.newPlot(                        "34a408b4-26b6-4d47-9d8d-7a2815f17acb",                        [{"direction":"clockwise","hole":0.56,"hovertemplate":"%{label}\u003cbr\u003e%{value:,} (%{percent})\u003cextra\u003e\u003c\u002fextra\u003e","insidetextfont":{"color":"#f0f0f0","size":15},"labels":["\u00c9lectrique","Essence","Diesel","Autres","Hybride rechargeable"],"marker":{"colors":["#3556a8","#a6a6a6","#4f4f4f","#d8a60b","#59c0df"],"line":{"color":"#ffffff","width":1}},"sort":false,"textinfo":"percent","textposition":"inside","values":[3911,1629,16786,36,809],"type":"pie","textfont":{"size":15}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05}}},"annotations":[{"font":{"color":"#1d1d1d","size":18},"showarrow":false,"text":"\u003cb\u003eTotal v\u00e9hicules \u00e0 prise: 4'720\u003c\u002fb\u003e","x":0.5,"xanchor":"center","y":0.5,"yanchor":"middle"}],"margin":{"l":24,"r":24,"t":10,"b":120},"legend":{"font":{"size":13},"orientation":"v","x":0.02,"y":-0.02,"xanchor":"left","yanchor":"top"},"font":{"family":"Arial, Helvetica, sans-serif","size":16,"color":"#222222"},"height":700,"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff"},                        {"displayModeBar": true, "displaylogo": false, "responsive": true, "locale": "fr", "toImageButtonOptions": {"format": "png", "filename": "lnf_market_share"}}                    )                };            </script>        </div></div>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-4.1.1.min.js" integrity="sha256-O24V1F27f8pb0glCkelh3cVHLNiHAJ5gCaVtq2aNch8=" crossorigin="anonymous"></script>                <div id="fa9785e6-cf7f-4821-b9f0-3970a1cf385e" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("fa9785e6-cf7f-4821-b9f0-3970a1cf385e")) {                    Plotly.newPlot(                        "fa9785e6-cf7f-4821-b9f0-3970a1cf385e",                        [{"direction":"clockwise","hole":0.56,"hovertemplate":"%{label}\u003cbr\u003e%{value:,} (%{percent})\u003cextra\u003e\u003c\u002fextra\u003e","insidetextfont":{"color":"#f0f0f0","size":15},"labels":["\u00c9lectrique","Essence","Diesel","Autres","Hybride rechargeable"],"marker":{"colors":["#3556a8","#a6a6a6","#4f4f4f","#d8a60b","#59c0df"],"line":{"color":"#ffffff","width":1}},"sort":false,"textinfo":"percent","textposition":"inside","values":[3911,1629,16786,36,809],"type":"pie","textfont":{"size":15}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05}}},"annotations":[{"font":{"color":"#1d1d1d","size":18},"showarrow":false,"text":"\u003cb\u003eTotal v\u00e9hicules \u00e0 prise: 4'720\u003c\u002fb\u003e","x":0.5,"xanchor":"center","y":0.5,"yanchor":"middle"}],"margin":{"l":24,"r":24,"t":10,"b":120},"legend":{"font":{"size":13},"orientation":"v","x":0.02,"y":-0.02,"xanchor":"left","yanchor":"top"},"font":{"family":"Arial, Helvetica, sans-serif","size":16,"color":"#222222"},"height":700,"paper_bgcolor":"#ffffff","plot_bgcolor":"#ffffff"},                        {"displayModeBar": true, "displaylogo": false, "modeBarButtonsToRemove": ["toImage"], "responsive": true, "locale": "fr"}                    )                };            </script>        </div></div>
     
     
     <div class="source">Graphique : Swiss eMobility - Source : OFROU</div>
@@ -169,6 +191,208 @@
           subtree: true,
         });
       }
+    })();
+  </script>
+  <script>
+    (function () {
+      var button = document.getElementById("download-chart-png");
+      if (!button) {
+        return;
+      }
+
+      function parsePixels(value) {
+        var parsed = Number.parseFloat(value);
+        return Number.isFinite(parsed) ? parsed : 0;
+      }
+
+      function wrapText(context, text, maxWidth) {
+        var words = text.trim().split(/\s+/);
+        var lines = [];
+        var line = "";
+
+        words.forEach(function (word) {
+          var candidate = line ? line + " " + word : word;
+          if (line && context.measureText(candidate).width > maxWidth) {
+            lines.push(line);
+            line = word;
+          } else {
+            line = candidate;
+          }
+        });
+
+        if (line) {
+          lines.push(line);
+        }
+        return lines;
+      }
+
+      function loadImage(source) {
+        return new Promise(function (resolve, reject) {
+          var image = new Image();
+          image.onload = function () { resolve(image); };
+          image.onerror = function () { reject(new Error("Could not load the chart image.")); };
+          image.src = source;
+        });
+      }
+
+      button.addEventListener("click", async function () {
+        var page = document.querySelector(".page");
+        var chart = document.querySelector(".plotly-graph-div");
+        var plotly = window.Plotly;
+        var originalLabel = button.textContent;
+
+        if (!page || !chart || !plotly || typeof plotly.toImage !== "function") {
+          window.alert("The chart is not ready to export. Please try again.");
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = document.documentElement.lang === "fr-CH"
+          ? "Préparation du PNG…"
+          : "PNG wird vorbereitet…";
+
+        try {
+          if (document.fonts && document.fonts.ready) {
+            await document.fonts.ready;
+          }
+
+          var pageStyle = window.getComputedStyle(page);
+          var scale = 2;
+          var pageWidth = page.clientWidth;
+          var paddingLeft = parsePixels(pageStyle.paddingLeft);
+          var paddingRight = parsePixels(pageStyle.paddingRight);
+          var paddingTop = parsePixels(pageStyle.paddingTop);
+          var paddingBottom = parsePixels(pageStyle.paddingBottom);
+          var contentWidth = pageWidth - paddingLeft - paddingRight;
+          var graphWidth = chart.clientWidth;
+          var graphHeight = chart.clientHeight;
+          var chartImageSource = await plotly.toImage(chart, {
+            format: "png",
+            width: graphWidth,
+            height: graphHeight,
+            scale: scale
+          });
+          var chartImage = await loadImage(chartImageSource);
+          var measureCanvas = document.createElement("canvas");
+          var measureContext = measureCanvas.getContext("2d");
+          if (!measureContext) {
+            throw new Error("Could not create a canvas for the PNG export.");
+          }
+
+          var sections = [];
+          var totalHeight = paddingTop;
+
+          function addTextSection(element) {
+            if (!element) {
+              return;
+            }
+
+            var text = (element.innerText || element.textContent || "").trim();
+            if (!text) {
+              return;
+            }
+
+            var style = window.getComputedStyle(element);
+            var fontSize = parsePixels(style.fontSize) || 14;
+            var lineHeight = parsePixels(style.lineHeight) || fontSize * 1.3;
+            var marginTop = parsePixels(style.marginTop);
+            var marginBottom = parsePixels(style.marginBottom);
+            measureContext.font = style.font;
+            var lines = wrapText(measureContext, text, contentWidth);
+
+            sections.push({
+              type: "text",
+              lines: lines,
+              font: style.font,
+              color: style.color,
+              fontSize: fontSize,
+              lineHeight: lineHeight,
+              marginTop: marginTop,
+              marginBottom: marginBottom
+            });
+            totalHeight += marginTop + lines.length * lineHeight + marginBottom;
+          }
+
+          addTextSection(page.querySelector("h1"));
+          addTextSection(page.querySelector(".subtitle"));
+
+          var chartWrap = page.querySelector(".chart-wrap");
+          var chartRect = chart.getBoundingClientRect();
+          var pageRect = page.getBoundingClientRect();
+          var chartX = chartRect.left - pageRect.left;
+          var chartMarginTop = chartWrap
+            ? parsePixels(window.getComputedStyle(chartWrap).marginTop)
+            : 0;
+          sections.push({
+            type: "chart",
+            image: chartImage,
+            x: chartX,
+            width: graphWidth,
+            height: graphHeight,
+            marginTop: chartMarginTop
+          });
+          totalHeight += chartMarginTop + graphHeight;
+
+          Array.prototype.forEach.call(page.children, function (element) {
+            if (element.matches(".export-controls, h1, .subtitle, .chart-wrap, .source, .note")) {
+              return;
+            }
+            addTextSection(element);
+          });
+          addTextSection(page.querySelector(".note"));
+          addTextSection(page.querySelector(".source"));
+          totalHeight += paddingBottom;
+
+          var canvas = document.createElement("canvas");
+          canvas.width = Math.ceil(pageWidth * scale);
+          canvas.height = Math.ceil(totalHeight * scale);
+          var context = canvas.getContext("2d");
+          if (!context) {
+            throw new Error("Could not create a canvas for the PNG export.");
+          }
+
+          context.scale(scale, scale);
+          context.fillStyle = window.getComputedStyle(document.body).backgroundColor || "#ffffff";
+          context.fillRect(0, 0, pageWidth, totalHeight);
+          var y = paddingTop;
+
+          sections.forEach(function (section) {
+            if (section.type === "chart") {
+              y += section.marginTop;
+              context.drawImage(section.image, section.x, y, section.width, section.height);
+              y += section.height;
+              return;
+            }
+
+            y += section.marginTop;
+            context.font = section.font;
+            context.fillStyle = section.color;
+            section.lines.forEach(function (line, index) {
+              context.fillText(
+                line,
+                paddingLeft,
+                y + section.fontSize + index * section.lineHeight
+              );
+            });
+            y += section.lines.length * section.lineHeight + section.marginBottom;
+          });
+
+          var download = document.createElement("a");
+          var chartId = document.documentElement.getAttribute("data-chart-id") || "chart";
+          download.download = chartId + ".png";
+          download.href = canvas.toDataURL("image/png");
+          download.click();
+        } catch (error) {
+          window.alert(
+            (document.documentElement.lang === "fr-CH"
+              ? "Échec de la création du PNG : "
+              : "PNG konnte nicht erstellt werden: ") + error.message
+          );
+        } finally {
+          button.disabled = false;
+          button.textContent = originalLabel;
+        }
+      });
     })();
   </script>
 </body>

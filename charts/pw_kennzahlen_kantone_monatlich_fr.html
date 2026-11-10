@@ -43,6 +43,27 @@
       margin-top: 10px;
     }
 
+    .export-controls {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+
+    .export-controls button {
+      padding: 8px 12px;
+      border: 1px solid #3556a8;
+      border-radius: 4px;
+      background: #ffffff;
+      color: #3556a8;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .export-controls button:disabled {
+      cursor: wait;
+      opacity: 0.7;
+    }
+
     .note {
       margin-top: 8px;
       color: var(--muted);
@@ -267,6 +288,7 @@
   <div class="page">
     <h1>Nouvelles immatriculations voitures de tourisme : indicateurs par canton du mois</h1>
     <div class="subtitle">Suisse : octobre 2026 (état : 31.10.2026)</div>
+    
     <div class="chart-wrap">
 
 <table class="canton-kpi-table" aria-label="Indicateurs par canton">
@@ -489,5 +511,6 @@
       }
     })();
   </script>
+  
 </body>
 </html>
